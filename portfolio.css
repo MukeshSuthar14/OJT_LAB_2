@@ -1,0 +1,254 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    position: absolute;
+    left: 0.5cm;
+    top: -0.2cm;
+}
+
+#logo1 {
+    color: #00FFFF;
+    font-weight: 900;
+    font-size: 30px;
+    position: absolute;
+    left: 2.4cm;
+    top: -0.2cm;
+}
+
+#header {
+    position: fixed;
+    display: flex;
+    background-color: black;
+    justify-content: right;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0px 0px 15px 1px #00FFFF;
+}
+
+.lnk {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 20px 10px 20px;
+    height: 40px;
+    width: 100px;
+}
+
+.lnk:hover {
+    color: black;
+    background-color: #00FFFF;
+    box-shadow: 0px 0px 15px 5px #00FFFF;
+    transition: 0.5s;
+}
+
+#fst {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+#info {
+    padding-top: 300px;
+    padding-left: 20px;
+    padding-right: 0px;
+    width: 50%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+}
+
+#img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding-top: 100px;
+}
+
+#info1 {
+    font-size: 20px;
+}
+
+#info2 {
+    color: #00FFFF;
+    font-size: 50px;
+    margin-top: -25px;
+    margin-left: -5px;
+}
+
+#info3 {
+    font-size: 20px;
+    margin-top: -50px;
+}
+
+#para {
+    font-size: 10px;
+    padding-right: 50px;
+    font-weight: 0;
+}
+
+#img1 {
+    height: 500px;
+    width: 500px;
+}
+
+#navi {
+    display: none;
+}
+
+@media screen and (max-width:633px) {
+    #navi {
+        list-style: none;
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin: 20px 20px 20px;
+        height: 20px;
+        width: 50px;
+        padding: 10px;
+    }
+
+    #navi:hover {
+        box-shadow: 0px 0px 15px 5px #00FFFF;
+        background-color: #00FFFF;
+        transition: 0.5s;
+        border-radius: 10px;
+    }
+
+    #more {
+        display: none;
+    }
+
+    #navi:hover #more {
+        position: absolute;
+        top: 1.6cm;
+        right: 0.5cm;
+        border: 1px solid #00FFFF;
+        background-color: black;
+        display: block;
+        color: white;
+        height: 125px;
+        width: 100px;
+    }
+
+    .ln {
+        display: block;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .ln:hover {
+        border-radius: 1px;
+        box-shadow: 0px 0px 1px 1px #00FFFF;
+        background-color: #00FFFF;
+    }
+
+    .lnk {
+        display: none;
+    }
+
+    #fst {
+        display: block;
+    }
+
+    #info {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #img {
+        margin-top: -100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #para {
+        padding: 0px 5px 0px 0px;
+    }
+}
+
+#edu {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 1px 1px #00FFFF;
+    border-radius: 10px;
+    height: 280px;
+    width: 350px;
+}
+
+#edu:hover {
+    box-shadow: 0px 0px 15px 10px #00FFFF;
+    transition: 0.5s;
+}
+
+#edu1 {
+    color: #00FFFF;
+    font-size: 50px;
+}
+
+#snd {
+    padding: 200px 0px 200px 100px;
+    background-color: black;
+    width: 100%-100px;
+}
+
+table tr td {
+    border-bottom: 1px solid #00FFFF;
+    padding: 10px 0px 10px 0px;
+    height: 40px;
+    width: 200px;
+}
+
+#ttle {
+    color: #00FFFF;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#ft td {
+    border: 0;
+}
+
+#edu2 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-left: 300px;
+    box-shadow: 0px 0px 1px 1px #00FFFF;
+    border-radius: 10px;
+    height: 280px;
+    width: 400px;
+}
+
+#edu2:hover {
+    box-shadow: 0px 0px 15px 10px #00FFFF;
+    transition: 0.5s;
+}
+
+#edu12 {
+    margin-left: 300px;
+    color: #00FFFF;
+    font-size: 50px;
+}
