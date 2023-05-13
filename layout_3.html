@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout 3</title>
+</head>
+<style>
+    * {
+        font-size: 30px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo {
+        background-color: gray;
+        width: 70%;
+        height: 70px;
+        margin: 10px auto 0px auto;
+    }
+
+    .bd {
+        display: flex;
+        width: 70%;
+        height: 500px;
+        margin: 10px auto 0px auto;
+    }
+    .side{
+        width: 30%;
+        margin-right: 10px;
+    }
+    .bd1{
+        width: 70%;
+    }
+    .head{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gray;
+        margin-bottom: 5px;
+        height: 150px;
+    }
+    .area{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gray;
+        height: 350px;
+    }
+    .foot{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: gray;
+        width: 70%;
+        height: 70px;
+        margin: 10px auto 0px auto;
+    }
+</style>
+
+<body>
+    <div class="logo">
+        Logo
+    </div>
+    <div class="bd">
+        <div class="side">
+            Side bar Navigation
+        </div>
+        <div class="bd1">
+            <div class="head">
+                Header/Banner
+            </div>
+            <div class="area">
+                Body Area
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        Footer
+    </div>
+</body>
+
+</html>
