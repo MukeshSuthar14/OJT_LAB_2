@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="download.png" type="image/x-icon">
+    <title>Number guessing game</title>
+</head>
+<style>
+    * {
+        color: white;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    input[type="text"] {
+        text-align: center;
+        border: 0;
+        font-size: 60px;
+        color: black;
+        background-color: white;
+        height: 60px;
+        width: 100px;
+    }
+
+    button {
+        border: 1px solid white;
+        font-size: 30px;
+        height: 60px;
+        width: 100px;
+        background-color: black;
+    }
+
+    button:hover {
+        border: 1px solid white;
+        font-size: 30px;
+        background-color: white;
+        color: black;
+    }
+
+    p {
+        font-size: 30px;
+        color: white;
+    }
+
+    #result {
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="first">
+        <center>
+            <h1>Number Guessing Game</h1>
+        </center>
+        <br>
+        <br>
+        <br>
+        <br>
+        <center>
+            <p>Enter Number between 1 to 100:</p>
+        </center>
+        <br>
+        <br>
+        <br>
+        <center><input type="text" id="guessInput"></center>
+        <br>
+        <center><button id="bt" onclick="guess()">Check</button></center>
+        <br>
+        <br>
+        <br>
+        <br>
+        <center>
+            <p id="result"></p>
+        </center>
+    </div>
+</body>
+<script>
+    // alert("This is a number guessing game...");
+    var randomNumber = Math.floor(Math.random() * 100) + 1;
+    var guessCount = 0;
+    console.log(randomNumber);
+    function guess() {
+        var guessInput = document.getElementById("guessInput").value;
+        if (guessInput == " ") {
+            alert("Please enter a number");
+            return;
+        }
+        var guess = parseInt(guessInput);
+        guessCount++;
+        if (guessInput < randomNumber) {
+            document.getElementById("result").innerHTML = "Your guess is too low";
+        }
+        else if (guessInput > randomNumber) {
+            document.getElementById("result").innerHTML = "Your guess is too high";
+        }
+        else {
+            document.getElementById("result").innerHTML = "Congratulations, you guessed the number in " + guessCount + " tries!<br>press ctrl+r to restart";
+            document.getElementById("guessInput").disabled = true;
+            document.getElementById("bt").disabled = true;
+        }
+    }
+</script>
+
+</html>

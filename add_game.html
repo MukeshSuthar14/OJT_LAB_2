@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition game</title>
+</head>
+<style>
+    * {
+        color: white;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    p {
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+
+    .add {
+        display: flex;
+        justify-content: center;
+        /* background-color: tomato; */
+        height: 60px;
+    }
+
+    input {
+        font-size: 30px;
+        margin-top: 28px;
+        color: black;
+        height: 30px;
+        width: 50px;
+    }
+
+    button{
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .butt{
+        display: flex;
+        justify-content: center;
+    }
+    #num1{
+        height: 50px;
+    }
+    #num2{
+        height: 50px;
+    }
+</style>
+<script>
+    var loop = 0;
+    var x = Math.floor(Math.random() * 100) + 1;
+    var y = Math.floor(Math.random() * 100) + 1;
+    function st(){
+        document.getElementById("num1").innerHTML = x;
+        document.getElementById("num2").innerHTML = y;
+        document.getElementById("plus").innerHTML = "+";
+        document.getElementById("equal").innerHTML = "=";
+    }
+    function check(){
+        let ans = parseInt(document.getElementById("ans").value);
+        if( ans == x+y){
+            document.getElementById("result").innerHTML = "Your answer is right";
+            document.getElementById("result1").innerHTML = " ";
+            document.getElementById("num1").innerHTML = " ";
+            document.getElementById("num2").innerHTML = " ";
+            document.getElementById("plus").innerHTML = " ";
+            document.getElementById("equal").innerHTML = " ";
+            loop++;
+            // if(loop>=2){
+            //     var x = Math.floor(Math.random() * 100) + 1;
+            //     var y = Math.floor(Math.random() * 100) + 1;
+            // }
+        }
+        else{
+            // document.getElementById("ans").innerHTML = " ";
+            document.getElementById("result").innerHTML = "Your answer is wrong";
+            document.getElementById("result1").innerHTML = "Right answer is " +(x+y);
+            document.getElementById("equal").innerHTML = " ";
+            document.getElementById("num1").innerHTML = " ";
+            document.getElementById("num2").innerHTML = " ";
+            document.getElementById("plus").innerHTML = " ";
+        }
+    }
+</script>
+
+<body>
+    <div class="main">
+        <h1>Addition game</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Type your answer in input field</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="add">
+            <p id="num1"></p>
+            <p id="plus"></p>
+            <p id="num2"></p>
+            <p id="equal"></p>
+            <input type="text" name="" id="ans">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="butt">
+            <button onclick="st()">START</button>
+        <button onclick="check()">check answer</button>
+        </div>
+        <p id="result"></p>
+        <p id="result1"></p>
+    </div>
+</body>
+
+</html>
