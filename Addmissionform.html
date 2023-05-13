@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Addmissionform.html</title>
+    <style type="text/css">
+      h1 {
+        border-style: double;
+        border-color: #cc33cc;
+        color: red;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-image: url(../../Public/Pictures/Sample%20Pictures/Lighthouse.jpg);
+        background-position: left top;
+        font-family: Arial Black;
+        text-decoration: underline overline blink;
+        font-style: normal;
+        text-align: center;
+      }
+      h2 {
+        border-style: hidden;
+        border-color: #999999;
+        color: #0507fd;
+        text-align: center;
+        font-weight: lighter;
+        font-family: Bernard MT Condensed;
+        text-decoration: underline;
+        font-style: inherit;
+        background-color: #ccccff;
+      } 
+      h3 {
+        border-style: outset;
+        border-color: #ffff66;
+        font-size: x-large;
+        color: #3366ff;
+        text-align: justify;
+        background-image: url(../../Public/Pictures/Sample%20Pictures/Tulips.jpg);
+        background-position: right center;
+        font-family: Corbel;
+        line-height: 0pc;
+        font-weight: bold;
+        font-style: inherit;
+      }
+    </style>
+    <script>
+       function submit(){
+        var nm=document.getElementById("name").value;
+        var x=document.getElementById("srn").value;
+        var y=document.getElementById("add").value;
+        if (nm==null||nm=="") 
+        {
+          alert("Please enter your name...");
+        }
+        else
+        {
+          if (x==null||x=="") 
+          {
+            alert("Please enter your surname...");
+          }
+          else
+          {
+            if(document.getElementById("male").checked==false&&document.getElementById("female").checked==false)
+              {
+                alert("Please select your gender...");
+              }
+            else
+            {
+              if (y==null||y=="") 
+              {
+                alert("Please enter your address..."); 
+              }
+            } 
+          }
+        }
+       } 
+       function reset()
+       {
+        var nm=document.getElementById("name").value="";
+        var x=document.getElementById("srn").value="";
+        var y=document.getElementById("add").value="";
+        var z1=document.getElementById("male").checked="";
+        var z2=document.getElementById("female").checked="";
+       }
+    </script>
+    <body>
+      <h1>addmission from</h1>
+      <h2>Addmission from</h2>
+      <div style="text-align: center;"><big><big><big style="font-weight: bold;">Detailes</big></big></big><br>
+      </div>
+      <center>
+        <table>
+          <tr>
+            <td>
+              <div style="text-align: center;">
+                Name:-
+              </div>
+            </td>
+            <td>
+              <input name="n" id="name" value="" placeholder="Enter name here...">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Surname:-
+            </td>
+            <td>
+              <input name="sn" id="srn" value="" placeholder="Enter surname here...">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gender:-
+            </td>
+            <td>
+              <input name="ge" value="male" type="radio" id="male">Male
+              <input name="ge" value="female" type="radio" id="female">Female
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Address:-
+            </td>
+            <td>
+              <textarea cols="20" rows="2" name="address" id="add" value="" placeholder="Insert address here..."></textarea>
+            </td>
+          </tr>
+        </table>
+        <input type="button" value="submit" onclick="submit()">
+        <input type="button" value="reset" onclick="reset()">
+      </center>
+      <h3 style="text-align: center;">
+        Thanks for visit
+      </h3>
+      <h3 style="text-align: center;">
+        my form
+      </h3>
+  </body>
+</html>
